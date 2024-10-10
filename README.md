@@ -40,7 +40,7 @@ Let's create a diverse collection of CSS buttons together!
         }
 </style>
 ```
-![CSS-Button](https://github.com/user-attachments/assets/c1014cfe-c158-425f-b432-7f1fe97887f7)
+<img src="static/example.png" alt="Button Example">
 
 \
 _A project by Association of Computer Engineering Students, [DIT Pimpri](https://engg.dypvp.edu.in/)_
