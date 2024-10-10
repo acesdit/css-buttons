@@ -1,8 +1,7 @@
 
 # CSS Buttons Contribution Repository
 
-![CSS Buttons](https://img.shields.io/badge/View%20Buttons-websiteforbuttons-8A2BE2
-)
+![CSS Buttons](https://img.shields.io/badge/View%20Buttons-websiteforbuttons-8A2BE2)
 
 ## How to Contribute
     1. Fork the repository.
@@ -11,9 +10,9 @@
 
 Let's create a diverse collection of CSS buttons together!
 
-## Examples
+## Example
 
-### 1. Simple Hover Button
+### 1. Simple Animated Gradient Button
 ```html
 <button class="hover-btn">Hover Me</button>
 
@@ -42,3 +41,8 @@ Let's create a diverse collection of CSS buttons together!
 </style>
 ```
 ![CSS-Button](https://github.com/user-attachments/assets/c1014cfe-c158-425f-b432-7f1fe97887f7)
+
+\
+_A project by Association of Computer Engineering Students, [DIT Pimpri](https://engg.dypvp.edu.in/)_
+
+<img src="static/aces-badge.png" alt="aces logo" width="300">
