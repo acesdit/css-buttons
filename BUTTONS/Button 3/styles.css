@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    margin: 0;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* CSS for button using class "btn" */
+.btn {
+    position: relative;
+    background-color: whitesmoke;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: none;
+    transition: 0.5s;
+}
+
+/* Hover effect */
+.btn:hover {
+    letter-spacing: 0.25rem;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 25px var(--clr);
+}
+
+/* To use the effect at borders */
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: black;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.btn i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    display: block;
+    /* This should be background color of body of button */
+    background: #121212;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.btn:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+.btn i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    display: block;
+    /* This should be background color of body of button */
+    background: #121212;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.btn:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    margin: 0;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* CSS for button using class "btn" */
+.btn {
+    position: relative; 
+    background-color: whitesmoke;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: none;
+    transition: 0.5s; /* Ensures smooth transitions for hover effects */
+}
+
+/* Hover effect */
+.btn:hover {
+    letter-spacing: 0.25rem;
+    background: var(--clr); /* Uses the custom CSS variable --clr for dynamic color changes */
+    color: var(--clr);
+    box-shadow: 0 0 25px var(--clr); /* Adds a glowing effect around the button using same colour*/
+}
+
+/* Element to create an effect within the button's borders */
+.btn::before {
+    content: ""; /* Creates an empty content block to apply visual effects */
+    position: absolute;
+    inset: 2px; /* Offsets the element 2px from all sides, creating a "border-like" effect */
+    background-color: black; 
+}
+
+
+.btn span {
+    position: relative;
+    z-index: 1; /* Ensures the text appears on top of the button's background effects */
+}
+
+.btn i {
+    position: absolute;
+    inset: 0; /* Stretches the element to fill the entire button */
+    display: block;
+}
+
+/* Top-left corner effect */
+.btn i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%; /* Starts near the right side */
+    width: 10px;
+    height: 4px;
+    background: #121212; /* Matches the body's background color for a subtle effect */
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s; 
+}
+
+/* When hovered, the top-left corner effect moves and widens */
+.btn:hover i::before {
+    width: 20px;
+    left: 20%; 
+}
+
+/* Bottom-right corner effect */
+.btn i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #121212; /* Same as the top-left effect */
+    transform: translateX(-50%) skewX(325deg); /* Creates a slant effect */
+    transition: 0.5s;
+}
+
+/* When hovered, the bottom-right corner effect also moves and widens */
+.btn:hover i::after {
+    width: 20px;
+    left: 80%; /* Moves toward the right side */
+}
