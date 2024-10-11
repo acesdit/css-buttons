@@ -39,7 +39,6 @@ body {
     background-color: black; 
 }
 
-
 .btn span {
     position: relative;
     z-index: 1; /* Ensures the text appears on top of the button's background effects */
