@@ -7,6 +7,7 @@
     1. Fork the repository.
     2. Add your custom button code in a new file or modify an existing one.
     3. Submit a pull request with a description of your button style.
+    NOTE: ADD HTML AND CSS SEPERATE FILES!!
 
 Let's create a diverse collection of CSS buttons together!
 
