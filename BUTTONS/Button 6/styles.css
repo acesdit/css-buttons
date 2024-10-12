@@ -1,0 +1,149 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --body-color: linear-gradient(135deg,
+                                hsl(280, 75%, 85%) 0%,  /* Light purple */
+                                hsl(200, 80%, 90%) 100%); /* Light blue */
+  --gradient-color: linear-gradient(90deg,
+                    hsl(144, 100%, 51%) 0%, /* Blue */
+                    hsl(109, 83%, 41%));  /* Pinkish Red */
+
+  --black-color: hsl(0, 0%, 10%);
+  --reflection-color: hsla(0, 0%, 100%, 0.3);
+
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 1rem;
+  --icon-color: hsl(265, 90%, 4%);
+  --text-color-hover: hsl(0, 0%, 0%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  margin-inline: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  position: relative;
+  transition: transform .4s;
+}
+
+.button__content {
+  position: relative;
+  background: var(--gradient-color);
+  padding: 1.25rem 3rem;
+  border-radius: 4rem;
+  border: 3px solid var(--black-color);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  overflow: hidden;
+}
+
+.button__text {
+  font-weight: 650;
+  font-size: 1.2rem;
+}
+
+.button__icon {
+  font-size: 1.75rem;
+  color: var(--icon-color); 
+  transition: transform 0.3s ease;
+}
+
+.button__text, 
+.button__icon {
+  position: relative;
+  z-index: 2;
+}
+
+.button__reflection-1, 
+.button__reflection-2 {
+  width: 8px;
+  height: 120px;
+  background-color: var(--reflection-color);
+  rotate: 30deg;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: -180%;
+  margin: auto;
+  transition: left .6s cubic-bezier(.2, .5, .2, 1.2);
+}
+
+.button__reflection-1::after {
+  content: "";
+  width: 26px;
+  height: 100%;
+  background-color: var(--reflection-color);
+  position: absolute;
+  top: -1rem;
+  left: 1.25rem;
+}
+
+.button__reflection-2::after {
+  content: "";
+  width: 40px;
+  height: 100%;
+  background-color: var(--reflection-color);
+  position: absolute;
+  top: -1rem;
+  left: .8rem;
+}
+
+.button__shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--gradient-color);
+  padding: 1.25rem 3rem;
+  border-radius: 4rem;
+  border: 3px solid var(--black-color);
+  z-index: -1;
+  transition: transform .3s;
+}
+
+.button:hover .button__shadow {
+  transform: translate(-.5rem, .5rem);
+}
+
+.button:hover .button__reflection-1 {
+  left: 120%;
+}
+
+.button:hover .button__reflection-2 {
+  left: -70%;
+}
+
+.button:hover .button__icon {
+  transform:  scale(1);
+}
+
+.button:hover .button__text {
+  color: var(--text-color-hover);
+}
+
+.button:hover {
+  transform: rotate(-4deg) scale(1.1);
+}
