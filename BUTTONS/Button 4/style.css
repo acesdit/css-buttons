@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(117, 117, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-booster{
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 40px;
+    background: white;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+.btn-booster:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+
+
