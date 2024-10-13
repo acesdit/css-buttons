@@ -16,7 +16,7 @@ Let's create a diverse collection of CSS buttons together!
 
 ### 1. Simple Animated Gradient Button
 ```html
-<button class="hover-btn">Hover Me</button>
+<button class="gradient-btn">Click Me</button>
 
 <style>
         body {
