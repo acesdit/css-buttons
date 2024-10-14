@@ -42,7 +42,7 @@ Let's create a diverse collection of CSS buttons together!
         }
 </style>
 ```
-<img src="static/example.png" alt="Button Example">
+<img src="static/Button Example.png" alt="Button Example">
 
 # Contributors
 
