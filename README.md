@@ -44,6 +44,13 @@ Let's create a diverse collection of CSS buttons together!
 ```
 <img src="static/example.png" alt="Button Example">
 
+# Contributors
+
+<a href="https://github.com/acesdit/css-buttons/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=acesdit/css-buttons" />
+</a>
+
+
 \
 _A project by Association of Computer Engineering Students, [DIT Pimpri](https://engg.dypvp.edu.in/)_
 
