@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Button</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Default background */
+            transition: background-color 1s; /* Smooth transition */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .classy-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #4E3B31; /* Dark brown text color */
+            background: linear-gradient(to right, #fff, #6F4C3E); /* Lateral gradient */
+            border: 2px solid #4E3B31; /* Dark brown border */
+            border-radius: 25px; /* Rounded corners */
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .classy-button:hover {
+            background: linear-gradient(to right, #6F4C3E, #fff); /* Reverse gradient on hover */
+            color: #4E3B31; /* Dark brown text on hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="classy-button">Click Me!</button>
+    </div>
+    <script>
+        const button = document.querySelector('.classy-button');
+        const colors = ['#f0f0f0', '#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ffcc99']; // Array of colors
+        let currentIndex = 0;
+
+        // Function to change background color cyclically
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length; // Cycle through the array
+        }
+
+        // Change background color every 4 seconds
+        setInterval(changeBackgroundColor, 4000);
+
+        button.addEventListener('click', () => {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>
