@@ -1,0 +1,73 @@
+
+:root {
+    --indicator-color: hsl(104, 94%, 50%);
+    --body-color: hsl(233, 12%, 14%);
+    --container-color: hsl(233, 12%, 20%);
+    --container-color-light: hsl(233, 12%, 26%);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--body-color);
+  }
+  
+  .skeuo__switch {
+    height: 80px;
+    background-color: var(--container-color);
+    padding: 0 1.5rem;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .skeuo__input {
+    display: none;
+  }
+  
+  .skeuo__rail {
+    position: relative;
+    width: 88px;
+    height: 28px;
+    background-color: var(--container-color-light);
+    border-radius: 3rem;
+  }
+  
+  .skeuo__circle {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: radial-gradient(circle at 33%, #d7d8da 0%, #5d5e65 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: transform .4s;
+  }
+  
+  .skeuo__indicator {
+    width: 12px;
+    height: 12px;
+    background-color: var(--container-color-light);
+    border-radius: 50%;
+    margin-left: 1.5rem;
+    transition: .4s;
+  }
+  
+  /* Toggle animation effects */
+  .skeuo__input:checked ~ .skeuo__rail .skeuo__circle {
+    transform: translate(52px, -50%);
+  }
+  
+  .skeuo__input:checked ~ .skeuo__indicator {
+    background-color: var(--indicator-color);
+  }
+  
