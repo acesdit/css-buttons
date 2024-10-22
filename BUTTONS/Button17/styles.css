@@ -1,110 +1,51 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
-
-* {
-  box-sizing: inherit;
-  transition-property: all;
-  transition-duration: 0.6s;
-  transition-timing-function: ease;
+/* Base button styles */
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.4s;
 }
 
-html,
+/* Animated button */
+.animated-button {
+    background-color: #db3fa2;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: "Arial Black", sans-serif;
+    font-size: xx-large;
+
+}
+
+.animated-button:hover {
+    background-color: #e37bbd;
+    box-shadow: 0 18px 24px 0 rgba(202, 119, 202, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Centering styles */
 body {
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  margin: 0; /* Add this to remove any default margins */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;         /* Full viewport height */
+    margin: 0; 
+    font-family: "Arial Black", sans-serif;   /* Remove default margin */
+    background-color: #000000; /* Optional background color */
 }
 
-body {
-  background: #2f279d;
-  font-family: "Arial Black", sans-serif;
-  font-weight: 400;
-  display: flex; /* Add this to center the content vertically and horizontally */
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1em;
-  text-align: center;
-}
-
-@media (min-width: 600px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.btn {
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 45px;
-  margin: 0 0 2em;
-  max-width: 160px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-@media (min-width: 600px) {
-  .btn {
-    margin: 0 1em 2em;
-  }
-}
-
-.btn:hover {
-  text-decoration: none;
-}
-
-.btn-2 {
-  letter-spacing: 0;
-}
-
-.btn-2:hover,
-.btn-2:active {
-  letter-spacing: 5px;
-}
-
-.btn-2:after,
-.btn-2:before {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0);
-  bottom: 0px;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
-  width: 0;
-}
-
-.btn-2:hover:after,
-.btn-2:hover:before {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border-color: #fff;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-}
-
-.btn-2:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
+h1 {
+    position: absolute; /* Positioning the heading */
+    top: 20px;         /* Adjust top position */
+    text-align: center; /* Center heading text */
+    width: 100%;       /* Full width */
 }
