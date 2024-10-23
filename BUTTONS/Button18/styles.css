@@ -1,0 +1,39 @@
+body {
+    /* Center the button on the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Black background for contrast */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cool-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff0000, #8b0000); /* Red gradient background */
+    border: none;
+    border-radius: 30px; /* Rounded corners for a smooth look */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* 3D shadow effect to give depth */
+    box-shadow: 0px 8px 0px #4b0000, 0px 8px 15px rgba(0, 0, 0, 0.4);
+    outline: none;
+    position: relative;
+}
+
+.cool-btn:hover {
+    /* Lift the button up slightly and increase shadow */
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 0px #4b0000, 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cool-btn:active {
+    /* Press the button down slightly to give a click effect */
+    transform: translateY(2px);
+    box-shadow: 0px 4px 0px #4b0000, 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
