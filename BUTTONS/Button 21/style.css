@@ -1,0 +1,73 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+     }
+     
+     body {
+       font-family: 'Arial', sans-serif;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       background-color: #f4f4f4;
+     }
+     
+     .button-container {
+       display: flex;
+       gap: 20px;
+     }
+     
+     /* General button styling */
+     .btn {
+       padding: 12px 25px;
+       border: none;
+       border-radius: 8px;
+       font-size: 16px;
+       font-weight: bold;
+       text-transform: uppercase;
+       cursor: pointer;
+       transition: all 0.3s ease-in-out;
+     }
+     
+     /* Dim Gold Button */
+     .gold-btn {
+       background-color: #b8860b; /* Dim gold */
+       color: white;
+     }
+     
+     .gold-btn:hover {
+       background-color: #daa520; /* Brightened gold on hover */
+     }
+     
+     /* Red Button */
+     .red-btn {
+       background-color: #c70000; /* Deep red */
+       color: white;
+     }
+     
+     .red-btn:hover {
+       background-color: #8b0000; /* Dark red on hover */
+     }
+     
+     /* Black Button */
+     .black-btn {
+       background-color: #000000; /* Solid black */
+       color: white;
+     }
+     
+     .black-btn:hover {
+       background-color: #333333; /* Dark grey on hover */
+     }
+     
+     /* White Button */
+     .white-btn {
+       background-color: #ffffff; /* White */
+       color: black;
+       border: 2px solid #000000; /* Black border */
+     }
+     
+     .white-btn:hover {
+       background-color: #f4f4f4; /* Light grey on hover */
+       color: #333333;
+     }
