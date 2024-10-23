@@ -1,0 +1,88 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f7797d);
+  background-size: 300% 300%;
+  animation: backgroundSlide 10s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes backgroundSlide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.custom-btn {
+  position: relative;
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing border and hover effects */
+.custom-btn:hover {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 15px 30px rgba(221, 36, 118, 0.5), 0px 0px 20px rgba(221, 36, 118, 0.8);
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* Ripple effect animation */
+.custom-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: width 0.5s ease, height 0.5s ease;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.custom-btn:hover::before {
+  width: 0%;
+  height: 0%;
+}
+
+/* Text glow and color shift */
+.custom-btn span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  transition: color 0.4s ease;
+}
+
+.custom-btn:hover span {
+  color: #f7f7f7;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Floating animation on hover */
+.custom-btn:hover {
+  animation: floating 1.5s ease-in-out infinite;
+}
+
+/* Floating keyframe animation */
+@keyframes floating {
+  0% { transform: scale(1.1) translateY(0px); }
+  50% { transform: scale(1.1) translateY(-10px); }
+  100% { transform: scale(1.1) translateY(0px); }
+}
