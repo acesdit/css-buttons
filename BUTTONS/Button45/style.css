@@ -1,0 +1,138 @@
+/* Global Styles */
+* {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+     
+     body {
+       font-family: 'Arial', sans-serif;
+       line-height: 1.6;
+       background-color: #f0f0f0; /* Light background */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+     }
+     
+     /* Button Container */
+     .button-container {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 20px;
+     }
+     
+     /* Button Base Styles */
+     .btn {
+       font-size: 16px;
+       font-weight: bold;
+       text-align: center;
+       padding: 15px 30px;
+       border: none;
+       border-radius: 50px; /* Rounded buttons */
+       cursor: pointer;
+       transition: all 0.3s ease;
+     }
+     
+     /* Crazy Button 1 */
+     .crazy-btn-1 {
+       background: linear-gradient(45deg, #ff6b6b, #f7c6c7);
+       color: white;
+       box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
+     }
+     
+     .crazy-btn-1:hover {
+       transform: scale(1.1) rotate(5deg);
+     }
+     
+     /* Crazy Button 2 */
+     .crazy-btn-2 {
+       background: #ffcc00;
+       color: #333;
+       border: 2px dashed #ff6b6b;
+     }
+     
+     .crazy-btn-2:hover {
+       background: #ff6b6b;
+       color: white;
+       transform: skew(10deg);
+     }
+     
+     /* Crazy Button 3 */
+     .crazy-btn-3 {
+       background: #6a82fb;
+       color: white;
+       border-radius: 20px;
+       position: relative;
+       overflow: hidden;
+     }
+     
+     .crazy-btn-3::before {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 300%;
+       height: 300%;
+       background: rgba(255, 255, 255, 0.2);
+       border-radius: 50%;
+       transition: all 0.5s ease;
+       transform: translate(-50%, -50%) scale(0);
+     }
+     
+     .crazy-btn-3:hover::before {
+       transform: translate(-50%, -50%) scale(1);
+     }
+     
+     .crazy-btn-3:hover {
+       color: #6a82fb;
+     }
+     
+     /* Crazy Button 4 */
+     .crazy-btn-4 {
+       background: #ff5f5f;
+       color: white;
+       border-radius: 50%;
+       width: 100px;
+       height: 100px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+     
+     .crazy-btn-4:hover {
+       transform: rotate(360deg);
+       transition: transform 0.5s ease;
+     }
+     
+     /* Crazy Button 5 */
+     .crazy-btn-5 {
+       background: #00b894;
+       color: white;
+       padding: 15px 30px;
+       border: none;
+       position: relative;
+       overflow: hidden;
+     }
+     
+     .crazy-btn-5::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 50%;
+       width: 300%;
+       height: 300%;
+       background: rgba(255, 255, 255, 0.3);
+       border-radius: 50%;
+       transition: all 0.5s ease;
+       transform: translate(-50%, -50%) scale(0);
+     }
+     
+     .crazy-btn-5:hover::after {
+       transform: translate(-50%, -50%) scale(1);
+     }
+     
+     .crazy-btn-5:hover {
+       color: #00b894;
+     }
