@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;  /* Dark background */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.futuristic-button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);  /* Gradient blue color */
+    color: white;
+    padding: 20px 40px;
+    border: 3px solid #00c6ff;  /* Bright border */
+    border-radius: 0px;  /* Sharp edges */
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.futuristic-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: left 0.5s ease;
+}
+
+.futuristic-button:hover::before {
+    left: 100%;  /* Slide animation effect */
+}
+
+.futuristic-button:hover {
+    background: linear-gradient(135deg, #00ff6c, #00c6ff);  /* Color change on hover */
+    border-color: #00ff6c;
+}
