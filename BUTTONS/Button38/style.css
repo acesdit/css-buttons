@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creative-button {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.creative-button:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.creative-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 10.01%);
+    background-size: 10px 10px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.creative-button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.creative-button:active {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    transform: translateY(2px);
+}
