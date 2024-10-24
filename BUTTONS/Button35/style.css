@@ -1,0 +1,26 @@
+
+  
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #000000;
+    }
+    .shadow-btn {
+        background: #963e28;
+        color: rgb(240, 217, 217);
+        padding: 23px 44px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 30px;
+        box-shadow: 0 5px #58312c;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .shadow-btn:hover {
+        box-shadow: 0 10px #b45a5a;
+        transform: translateY(-5px);
+    }
+
