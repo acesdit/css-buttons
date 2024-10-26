@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.abhi-button {
+    background: linear-gradient(45deg, #ff6b6b, #f7d94c);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.5);
+    outline: none;
+}
+
+.abhi-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.7);
+}
+
+.abhi-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.5);
+}
