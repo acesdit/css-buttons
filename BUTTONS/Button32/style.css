@@ -1,0 +1,54 @@
+body {
+    overflow: hidden;
+  }
+  #button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 10vmax;
+    height: 10vmax;
+    background: #222;
+    z-index: 999;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10vmax black;
+    text-align: center;
+    line-height: 10vmax;
+    font-family: system-ui, BlinkMacSystemFont, sans-serif;
+    font-size: 1.5vmax;
+    letter-spacing: .125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    &:before {
+      content:'.';
+      letter-spacing: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      background: #000;
+      cursor: pointer;
+      & ~ #front {
+        transform: scale3d(1.5,1.5,1);
+      }
+    }
+  }
+  #front {
+    position: absolute;
+    z-index: 888;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100vmax;
+    height: 100vmax;
+    background: #000;
+    border-radius: 50%;
+    mix-blend-mode: color;
+    transform: scale3d(0.1,0.1,1);
+    transition: transform .5s ease-in-out;
+  }
