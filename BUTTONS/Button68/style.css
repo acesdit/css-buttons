@@ -1,0 +1,35 @@
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    animation: float 2s infinite ease-in-out;
+    background-color:fuchsia;
+    padding: 16px 45px;
+    font-size: x-large;
+    border-radius: 10px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.floating-button button:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('path_to_your_barbie_image.jpg'); /* Add your Barbie image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+    text-align: center;
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background behind the button */
+}
+
+.barbie-button {
+    background-color: rgba(255, 111, 145, 0.8); /* Semi-transparent Barbie pink */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.barbie-button:hover {
+    background-color: rgba(255, 74, 126, 0.8); /* Darker pink on hover */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+.barbie-button:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+}
