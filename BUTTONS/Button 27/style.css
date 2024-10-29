@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a;
+}
+
+.sexy-button {
+    background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 10px 20px rgba(255, 0, 110, 0.4);
+}
+
+.sexy-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 30px rgba(255, 0, 110, 0.6);
+}
+
+.sexy-button:active {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(255, 0, 110, 0.4);
+}
