@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Border Animation Button */
+.border-anim-btn {
+    padding: 15px 30px;
+    background: transparent;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+}
+
+.border-anim-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #333;
+    transition: 0.5s;
+}
+
+.border-anim-btn:hover::before {
+    transform: scale(1.1);
+    opacity: 0;
+}
