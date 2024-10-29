@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch Me If You Can Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="tricky-btn">Click Me!</button>
+
+  <script>
+    const button = document.querySelector('.tricky-btn');
+
+    button.addEventListener('mouseover', () => {
+      // Generate random X and Y positions within the window's width and height
+      const randomX = Math.random() * (window.innerWidth - button.clientWidth);
+      const randomY = Math.random() * (window.innerHeight - button.clientHeight);
+
+      // Apply the new random position to the button
+      button.style.left = `${randomX}px`;
+      button.style.top = `${randomY}px`;
+    });
+  </script>
+</body>
+</html>
