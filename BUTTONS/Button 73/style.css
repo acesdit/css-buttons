@@ -1,0 +1,12 @@
+.btn{
+    color: white;
+    background-color: purple;
+    border: 1px solid black;
+
+}
+.btn:hover{
+    opacity: inherit;
+    height: 90px;
+    width: 90px;
+    
+}
