@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fireworks Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="fire-btn">Celebrate!</button>
+
+  <script>
+    const button = document.querySelector('.fire-btn');
+
+    button.addEventListener('click', () => {
+      fireCrackers();
+    });
+
+    function fireCrackers() {
+      for (let i = 0; i < 30; i++) {
+        createParticle();
+      }
+    }
+
+    function createParticle() {
+      const particle = document.createElement('span');
+      particle.classList.add('particle');
+      document.body.appendChild(particle);
+
+      // Set random position, size, and color
+      particle.style.left = `${Math.random() * window.innerWidth}px`;
+      particle.style.top = `${Math.random() * window.innerHeight}px`;
+      particle.style.width = particle.style.height = `${Math.random() * 10 + 5}px`;
+      particle.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+      // Remove particle after animation completes
+      particle.addEventListener('animationend', () => particle.remove());
+    }
+  </script>
+</body>
+</html>

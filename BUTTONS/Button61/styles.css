@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0e0e0e;
+    font-family: Arial, sans-serif;
+}
+
+.button-container {
+    text-align: center;
+}
+
+
+.crazy-btn {
+    padding: 20px 60px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(255, 75, 43, 0.6), 0px 0px 25px rgba(255, 65, 108, 0.8);
+}
+
+
+.crazy-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 70%);
+    opacity: 0.6;
+    transform: rotate(0deg);
+    transition: transform 1.5s ease-in-out;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotateGlow 6s linear infinite;
+}
+
+
+.crazy-btn:hover {
+    transform: scale(1.1) rotate(2deg);
+    background: linear-gradient(45deg, #42e695, #3bb2b8);
+    box-shadow: 0px 0px 20px rgba(66, 230, 149, 0.6), 0px 0px 30px rgba(59, 178, 184, 0.8);
+}
+
+
+.crazy-btn:active {
+    transform: scale(0.95) rotate(-2deg);
+    background: linear-gradient(45deg, #e65e42, #b23b59);
+    box-shadow: 0px 0px 10px rgba(230, 94, 66, 0.6), 0px 0px 20px rgba(178, 59, 89, 0.8);
+}
+
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
