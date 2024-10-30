@@ -1,0 +1,78 @@
+/* Center the button on the page */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Basic circular button styling */
+.glow-button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  color: rgb(19, 19, 19);
+  background-color: #007bff; /* Blue button color */
+  border: none;
+  border-radius: 50%; /* Perfectly circular */
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Soft 3D shadow effect */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2), 
+              inset 0px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effect to add depth and color transition */
+.glow-button:hover {
+  transform: translateY(-3px);
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.35), 
+              inset 0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Subtle blue glow effect */
+.glow-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250%;
+  height: 250%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0) 70%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(15px); /* Reduced blur for a softer glow */
+}
+
+/* Hover effect to make the blue glow visible */
+.glow-button:hover::before {
+  opacity: 1;
+  animation: pulse 1.5s infinite;
+}
+
+/* Click effect for a different glow color */
+.glow-button:active {
+  background-color: #004080;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.25); /* Slightly reduced pulse scale */
+  }
+}
