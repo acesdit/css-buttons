@@ -11,7 +11,7 @@
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
-
+ 
 .effect-button:hover {
     background-color: #2980b9;
     transform: scale(1.1);
