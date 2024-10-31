@@ -1,0 +1,82 @@
+/* Basic page styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Light mode styling */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Toggle button styling */
+.toggle {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Light and Dark mode toggle button colors */
+.toggle.light-mode {
+    background-color: #ccc;
+}
+
+.toggle.dark-mode {
+    background-color: #555;
+}
+
+/* Icon styling */
+.icon {
+    font-size: 18px;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Position Sun and Moon icons */
+.sun {
+    left: 15px;
+    opacity: 1;
+}
+
+.moon {
+    right: 15px;
+    opacity: 0;
+}
+
+/* Animate Sun and Moon for Dark Mode */
+.toggle.dark-mode .sun {
+    transform: translateX(60px);
+    opacity: 0;
+}
+
+.toggle.dark-mode .moon {
+    transform: translateX(-60px);
+    opacity: 1;
+}
