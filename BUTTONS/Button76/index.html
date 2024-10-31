@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diwali Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="diwali-btn">Happy Diwali! 🎆</button>
+
+  <script>
+    const button = document.querySelector('.diwali-btn');
+
+    button.addEventListener('click', () => {
+      triggerFireworks();
+      button.classList.add('glow');  // Add glowing effect
+      setTimeout(() => button.classList.remove('glow'), 2000);  // Remove glow after 2s
+    });
+
+    function triggerFireworks() {
+      for (let i = 0; i < 20; i++) {
+        createFirework();
+      }
+    }
+
+    function createFirework() {
+      const firework = document.createElement('span');
+      firework.classList.add('firework');
+      document.body.appendChild(firework);
+
+      // Random position and animation trigger
+      firework.style.left = `${Math.random() * window.innerWidth}px`;
+      firework.style.top = `${Math.random() * window.innerHeight}px`;
+
+      // Remove after animation ends
+      firework.addEventListener('animationend', () => firework.remove());
+    }
+  </script>
+</body>
+</html>
