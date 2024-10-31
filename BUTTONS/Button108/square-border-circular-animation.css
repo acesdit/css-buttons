@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.btn:hover .btn-slide-show-text1 {
+    margin-left: 65px;
+}
+
+.btn-rect-to-round {
+    height: 55px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.btn-rect-to-round:hover {
+    border-radius: 60px;
+    color: rgb(255, 255, 255) !important;
+}
+
+.btn-rect-to-round--orange {
+    color: rgb(254, 174, 0) !important;
+    border: 2px solid rgb(254, 174, 0);
+}
+
+.btn-rect-to-round--orange:hover {
+    border-color: rgb(254, 174, 0);
+    background: rgb(254, 174, 0);
+}
