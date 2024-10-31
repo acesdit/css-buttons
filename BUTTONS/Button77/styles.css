@@ -1,0 +1,57 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Butterfly Button */
+  .butterfly-btn {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #ffab91;
+  }
+  
+  .butterfly-btn:hover {
+    background-color: #ff3d00;
+    box-shadow: 0 0 30px #ff7043;
+  }
+  
+  /* Butterfly Styles */
+  .butterfly {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(butter.png);
+    background-size: cover;
+    pointer-events: none;
+    animation: fly 5s ease-in-out;
+  }
+  
+  /* Butterfly Flying Animation */
+  @keyframes fly {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50px, -300px) rotate(45deg);
+    }
+    100% {
+      transform: translate(100px, -1000px) rotate(90deg);
+      opacity: 0;
+    }
+  }
+  

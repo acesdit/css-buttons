@@ -1,0 +1,52 @@
+/* General Styles */
+body {
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Button Styles */
+  .fire-btn {
+    padding: 15px 40px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fire-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Particle Styles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: explode 1s ease-out;
+    pointer-events: none;
+  }
+  
+  /* Particle Explosion Animation */
+  @keyframes explode {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    80% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  

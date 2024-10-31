@@ -1,0 +1,35 @@
+/* General Styles */
+body {
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Morphing Button Styles */
+  .morph-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: 20px; /* Initially rounded */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Hover Effect - Change Shape */
+  .morph-btn:hover {
+    border-radius: 50%; /* Turns into a circle */
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    font-size: 16px;
+    background-color: #ff5733; /* Optional color change */
+    transform: rotate(360deg); /* Smooth rotation */
+  }
+  

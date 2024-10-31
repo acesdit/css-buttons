@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Diwali Button */
+  .diwali-btn {
+    background-color: #f39c12;
+    color: white;
+    font-size: 24px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #e67e22;
+  }
+  
+  .diwali-btn:hover {
+    background-color: #e67e22;
+    box-shadow: 0 0 30px #f1c40f;
+  }
+  
+  /* Glow Effect */
+  .diwali-btn.glow {
+    box-shadow: 0 0 60px #f39c12, 0 0 120px #f1c40f;
+  }
+  
+  /* Fireworks */
+  .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(${Math.random() * 360}, 100%, 50%);
+    border-radius: 50%;
+    animation: explode 1s ease-out;
+  }
+  
+  /* Firework Animation */
+  @keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  

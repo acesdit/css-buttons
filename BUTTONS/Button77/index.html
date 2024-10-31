@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butterfly Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="butterfly-btn">Release Butterflies 🦋</button>
+
+  <script>
+    const button = document.querySelector('.butterfly-btn');
+
+    button.addEventListener('click', () => {
+      releaseButterflies();
+    });
+
+    function releaseButterflies() {
+      for (let i = 0; i < 10; i++) {
+        createButterfly();
+      }
+    }
+
+    function createButterfly() {
+      const butterfly = document.createElement('span');
+      butterfly.classList.add('butterfly');
+      document.body.appendChild(butterfly);
+
+      // Random horizontal starting position at the bottom
+      butterfly.style.left = `${Math.random() * window.innerWidth}px`;
+      butterfly.style.top = `${window.innerHeight}px`;  // Start from the bottom
+
+      // Remove the butterfly after the animation finishes
+      butterfly.addEventListener('animationend', () => butterfly.remove());
+    }
+  </script>
+</body>
+</html>

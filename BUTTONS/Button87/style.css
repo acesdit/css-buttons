@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .btn-3d {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px #0056b3;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn-3d:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2), 0 8px #0056b3;
+  }
+  
+  .btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px #0056b3;
+  }
+  
