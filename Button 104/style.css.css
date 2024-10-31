@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+}
+
+.container {
+    text-align: center;
+}
+
+.share-button {
+    display: flex;
+    gap: 25px;
+}
+
+.share-button i {
+    font-size: 30px;
+    color: #ffffff;
+    background: linear-gradient(145deg, #007bff, #0056b3); /* Gradient for depth */
+    border-radius: 50%; /* Fully round */
+    padding: 15px;
+    box-shadow: 
+        6px 6px 15px rgba(255, 255, 255, 0.6),
+        -6px -6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.share-button i:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        4px 4px 12px rgba(255, 255, 255, 0.8),
+        -4px -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional color variations */
+.share-button i:nth-child(1) {
+    background: linear-gradient(145deg, #3b5998, #2d4373); /* Facebook gradient */
+}
+
+.share-button i:nth-child(2) {
+    background: linear-gradient(145deg, #1da1f2, #0a84d0); /* Twitter gradient */
+}
+
+.share-button i:nth-child(3) {
+    background: linear-gradient(145deg, #0077b5, #005582); /* LinkedIn gradient */
+}
+
