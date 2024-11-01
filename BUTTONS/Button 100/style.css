@@ -2,3 +2,7 @@
     background-color: brown;
     color: white;
 }
+.btn:hover{
+    background-color: aqua;
+    color: black;
+}
